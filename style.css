@@ -1,0 +1,178 @@
+:root
+{
+    --red: hsl(1, 90%, 64%);
+    --blue: hsl(219, 85%, 26%);
+    --very-light-grayish-blue: hsl(210, 60%, 98%);
+    --light-grayish-blue-1: hsl(211, 68%, 94%);
+    --light-grayish-blue-2: hsl(205, 33%, 90%);
+    --grayish-blue: hsl(219, 14%, 63%);
+    --dark-grayish-blue: hsl(219, 12%, 42%);
+    --very-dark-blue: hsl(224, 21%, 14%);
+}
+
+*
+{
+    margin: 0;
+    padding: 0;
+}
+
+.flex{display: flex;}
+.flex-row{flex-direction: row;}
+.flex-center{align-items: center;}
+.flex-between{justify-content: space-between;}
+
+body
+{
+    font-size: 16px;
+    background-color: var(--very-light-grayish-blue);
+    font-family: 'Plus Jakarta Sans';
+    box-sizing: border-box;  
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+main
+{
+    width: 100%;
+    max-width: 600px;
+    padding: 1.5rem 1rem;
+    background-color: white;
+    box-sizing: border-box;
+    border-radius: 1rem;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.062);
+}
+
+.header
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    box-sizing: border-box;
+    margin-bottom: 1.5rem;
+}
+
+h1
+{
+    font-size: 1.2rem;
+    font-weight: 800;
+}
+
+#noti-counts
+{
+    margin-left: .5rem;
+    padding: 3px 12px 5px;
+    background-color: var(--blue);
+    border-radius: 6px;
+    color: white;
+    font-size: .9rem;
+    font-weight: 800;
+}
+
+.header p
+{
+    color: var(--dark-grayish-blue);
+    font-size: .8rem;
+}
+.header p:hover
+{
+    color: var(--blue);
+    cursor: pointer;
+}
+
+
+.notifications .noti
+{
+    padding: 1rem;
+    border-radius: .5rem;
+    background-color: white;
+    display: flex;
+    flex-direction: row;
+    margin-bottom: .8rem;
+    transition: 0.5s ease-in-out;
+}
+
+.notifications > div img 
+{
+    width: 40px;
+    height: 40px;
+    margin-right: 1rem;
+}
+
+.notifications > div p 
+{
+    font-size: .9rem;
+}
+
+.notifications > div .name 
+{
+    color: var(--very-dark-blue);
+    text-decoration: none;
+    font-weight: 800;
+}
+.notifications > div .name:hover
+{
+    cursor: pointer;
+    color: var(--blue);
+}
+
+.notifications > div .post
+{
+    color: var(--dark-grayish-blue);
+    text-decoration: none;
+    font-weight: 800;
+}
+.notifications > div .post:hover
+{
+    cursor: pointer;
+    color: var(--blue);
+}
+
+.notifications > div .noti-dot
+{
+    color: var(--red);
+    margin-left: 5px;
+}
+
+.notifications > div .time-ago
+{
+    font-size: .8rem;
+    margin-top: .2rem;
+    color: var(--grayish-blue);
+    font-weight: 800;
+}
+
+.notifications > div .priv-message
+{
+    padding: 1rem;
+    border: 1px solid var(--light-grayish-blue-1);
+    border-radius: .3rem;
+    margin-top: 1rem;
+    text-decoration: none;
+}
+.notifications > div .priv-message:hover 
+{
+    background-color: var(--light-grayish-blue-1);
+}
+
+.notifications > div .priv-message-ad
+{
+    color: var(--dark-grayish-blue);
+    text-decoration: none;
+}
+.notifications > div .priv-message-ad:hover 
+{
+    cursor: pointer;
+}
+
+.notifications > div .photo 
+{
+    text-align: right;
+}
+.notifications > div .photo:hover 
+{
+    box-shadow: -4px 4px 2px hsla(219, 75%, 44%, 0.096);
+}
+

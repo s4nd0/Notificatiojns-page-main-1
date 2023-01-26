@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;800&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  <link rel="stylesheet" href="style.css">
+  <title>Frontend Mentor | Notifications page</title>
+</head>
+<body>
+  <main>
+    <div class="header">
+      <div class="flex flex-row flex-center">
+        <h1>Notifications</h1>
+        <div id="noti-counts">3</div>
+      </div>
+      <p class="flex flex-center" onclick="markAll()">Mark all as read</p>
+    </div>
+
+    <div class="notifications">
+      <div class="unread noti" style="background-color: hsl(205, 33%, 90%);">
+        <img src="./assets/images/avatar-mark-webber.webp" alt="">
+        <div>
+          <p>
+            <a class="name" href="">Mark Webber</a> reacted to your recent post <a class="post" href="">My first tournament today!</a> <span class="noti-dot">&#9679;</span>
+          </p>
+          <p class="time-ago">1m ago</p>       
+        </div>
+      </div>
+
+      <div class="unread noti" style="background-color: hsl(205, 33%, 90%);">
+        <img src="./assets/images/avatar-angela-gray.webp" alt="">
+        <div>
+          <p>
+            <a class="name" href="">Angela Gray</a> followed you <span class="noti-dot">&#9679;</span>
+          </p>
+          <p class="time-ago">5m ago</p>       
+        </div>
+      </div>
+
+      <div class="unread noti" style="background-color: hsl(205, 33%, 90%);">
+        <img src="./assets/images/avatar-jacob-thompson.webp" alt="">
+        <div>
+          <p>
+            <a class="name" href="">Jacob Thompson</a> has joined your group <a class="post" href="">Chess Club</a> <span class="noti-dot">&#9679;</span>
+          </p>
+          <p class="time-ago">1day ago</p>       
+        </div>
+      </div>
+
+      <div class="noti">
+        <img src="./assets/images/avatar-rizky-hasanuddin.webp" alt="">
+        <div>
+          <p>
+            <a class="name" href="">Rizky Hasanuddin</a> sent you a private message
+          </p>
+          <p class="time-ago">5days ago</p>    
+          <a class="priv-message-ad" href="">
+            <p class="priv-message">
+              Hello, thanks for setting up the Chess Club. I've been a member for a few weeks now and
+              I'm already having lots of fun and improving my game.
+            </p> 
+          </a>
+        </div>
+      </div>
+
+      <div class="flex-between noti">
+        <div class="flex flex-row">
+          <img src="./assets/images/avatar-kimberly-smith.webp" alt="">
+          <div>
+            <p>
+              <a class="name" href="">Kimberly Smith</a> commented on your picture 
+            </p>
+            <p class="time-ago">1week ago</p>       
+          </div>
+        </div>
+        
+        <a href=""><img class="photo" src="./assets/images/image-chess.webp" alt=""></a>
+      </div>
+
+      <div class="noti">
+        <img src="./assets/images/avatar-nathan-peterson.webp" alt="">
+        <div>
+          <p>
+            <a class="name" href="">Nathan Peterson</a> reacted to your recent post 
+            <a class="post" href="">5 end-game strategies to increase your win rate</a>
+          </p>
+          <p class="time-ago">2week ago</p>       
+        </div>
+      </div>
+
+      <div class="noti">
+        <img src="./assets/images/avatar-anna-kim.webp" alt="">
+        <div>
+          <p>
+            <a class="name" href="">Anna Kim</a> Left the group <a class="post" href="">Chess Club</a>
+          </p>
+          <p class="time-ago">2week ago</p>       
+        </div>
+      </div>
+
+
+    </div>
+  </main>
+
+  <script>
+    function markAll()
+    {
+      const collection = document.getElementsByClassName("unread");
+      for (let i = 0; i < collection.length; i++)     
+      {
+        collection[i].style.backgroundColor = "white";
+      }
+
+      const collection2 = document.getElementsByClassName("noti-dot");
+      for (let i = 0; i < collection2.length; i++)     
+      {
+        collection2[i].style.display = "none";
+      }
+
+      document.getElementById("noti-counts").innerHTML = "0";
+    }
+  </script>
+
+</body>
+</html>
